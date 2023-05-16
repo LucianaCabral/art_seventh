@@ -16,6 +16,5 @@ rootProject.name = "Art Seventh"
 include ':app'
 include ':core'
 include ':core:common'
-include ':core:common:domain'
 include ':features:trends'
 
