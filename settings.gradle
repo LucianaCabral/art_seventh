@@ -18,4 +18,5 @@ include ':core'
 include ':core:common'
 include ':core:common:domain'
 include ':features:trends'
-
+include ':core:common:navigation'
+include ':core:common:navigation:features'
