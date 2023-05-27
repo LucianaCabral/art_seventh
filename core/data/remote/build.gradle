@@ -3,15 +3,23 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+def keyApiPropertiesFile = rootProject.file("$rootDir/keyApi.properties")
+def keyApiProperties = new Properties()
+keyApiProperties.load(new FileInputStream(keyApiPropertiesFile))
+
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         minSdk 21
-        targetSdk 32
+        targetSdk 33
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+
+        buildConfigField "String", "API_KEY", keyApiProperties['API_KEY']
+        buildConfigField "String", "API_URL", '"https://api.themoviedb.org/3/"'
+
     }
 
     buildTypes {
@@ -41,5 +49,13 @@ dependencies {
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+
+    implementation 'io.insert-koin:koin-core:2.2.3'
+    implementation 'io.insert-koin:koin-android:2.2.3'
+    implementation 'io.insert-koin:koin-androidx-scope:2.2.3'
+    implementation 'io.insert-koin:koin-androidx-viewmodel:2.2.3'
+
 
 }
