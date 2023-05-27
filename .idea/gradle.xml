@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/core/common/navigation" />
             <option value="$PROJECT_DIR$/core/common/navigation/features" />
             <option value="$PROJECT_DIR$/core/data" />
+            <option value="$PROJECT_DIR$/core/data/hub" />
             <option value="$PROJECT_DIR$/core/data/remote" />
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/trends" />

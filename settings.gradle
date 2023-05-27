@@ -20,6 +20,6 @@ include ':core:common:domain'
 include ':core:common:navigation'
 include ':core:common:navigation:features'
 include ':core:data'
+include ':core:data:hub'
 include ':core:data:remote'
 include ':features:trends'
-
