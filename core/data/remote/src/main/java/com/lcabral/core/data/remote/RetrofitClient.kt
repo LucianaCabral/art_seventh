@@ -11,8 +11,8 @@ internal const val WRITE_TIMEOUT = 30L
 internal const val CONNECT_TIMEOUT = 30L
 
 class RetrofitClient(
-    private val baseUrl: String,
-    private val interceptors: List<Interceptor>
+    private val baseUrl: String = BuildConfig.API_URL,
+    private val interceptors: List<Interceptor>,
 ) {
 
     fun create(): Retrofit {
