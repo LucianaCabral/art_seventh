@@ -6,4 +6,4 @@ import retrofit2.http.GET
 internal interface TrendingService {
     @GET("/3/movie/trendings")
     suspend fun getTrendings(): TrendingsResult
-}]
+}
