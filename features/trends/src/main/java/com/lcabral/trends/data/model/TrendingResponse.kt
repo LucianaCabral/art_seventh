@@ -1,23 +1,23 @@
 package com.lcabral.trends.data.model
 
-import kotlinx.serialization.SerialName
+import com.google.gson.annotations.SerializedName
 
 internal data class TrendingResponse(
-    @SerialName("id")
+    @SerializedName("id")
     val id: Int,
-    @SerialName("title")
+    @SerializedName("title")
     val title: String?,
-    @SerialName("backdrop_Path")
+    @SerializedName("backdrop_Path")
     val backdropPath: String,
-    @SerialName("overview")
+    @SerializedName("overview")
     val overview: String,
-    @SerialName("popularity")
+    @SerializedName("popularity")
     val popularity: Double,
-    @SerialName("poster_path")
+    @SerializedName("poster_path")
     val posterPath: String,
-    @SerialName("release_date")
+    @SerializedName("release_date")
     val releaseDate: String?,
-    @SerialName("vote_average")
+    @SerializedName("vote_average")
     val voteAverage: Double,
 )
 

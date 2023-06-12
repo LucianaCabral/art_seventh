@@ -46,9 +46,9 @@ ext {
     materialVersion = '1.1.0'
 
     dependencies = [
-            kotlin                : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
-            coroutinesCore        : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion",
-            coroutinesAndroid     : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion",
+//            kotlin                : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+//            coroutinesCore        : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion",
+//            coroutinesAndroid     : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion",
 
             appCompact            : "androidx.appcompat:appcompat:$appCompactVersion",
             constraintlayout      : "androidx.constraintlayout:constraintlayout:$constrainVersion",

@@ -8,5 +8,5 @@ object MainModule {
 
     private val dataModule:Module = module {  }
     private val domainModule:Module = module {  }
-    private val presentation:Module = module {  }
+    private val presentation:Module = module { }
 }
