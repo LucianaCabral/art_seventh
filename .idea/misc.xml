@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/englu/AndroidStudioProjects/ArtSeventh/app/src/main/res/layout/activity_main.xml" value="0.196875" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
-        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/trends/src/main/res/layout/fragment_trending.xml" value="0.38089005235602097" />
-        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/trends/src/main/res/layout/item_trending_carousel.xml" value="0.39197530864197533" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/layout/fragment_trendingV2.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/trends/src/main/res/drawable/ic_error.xml" value="0.193" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/trends/src/main/res/layout/fragment_trending.xml" value="0.25" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/trends/src/main/res/layout/item_trending_carousel.xml" value="0.536" />
       </map>
     </option>
   </component>

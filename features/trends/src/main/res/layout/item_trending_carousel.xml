@@ -1,40 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:id="@+id/item_root"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:cardElevation="@dimen/cardview_default_elevation"
-    app:cardCornerRadius="@dimen/cardview_default_radius">
+    android:layout_marginEnd="@dimen/dimen_4">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_item"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/trending_image"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             tools:ignore="ImageContrastCheck"
             tools:src="@tools:sample/avatars" />
 
-        <androidx.appcompat.widget.AppCompatCheckedTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/trending_movie_tv"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="12dp"
             android:gravity="start"
-            android:padding="@dimen/dimen_8"
-            android:textColor="#C62828"
-            android:textSize="@dimen/font_size_18"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:padding="2dp"
+            android:textColor="#FFFF"
+            android:textSize="@dimen/font_size_16"
+            app:layout_constraintBottom_toBottomOf="@id/trending_image"
+            app:layout_constraintEnd_toEndOf="@id/trending_image"
+            app:layout_constraintStart_toStartOf="@id/trending_image"
+            app:layout_constraintTop_toTopOf="@id/trending_image"
             tools:text="Filme XPTO" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

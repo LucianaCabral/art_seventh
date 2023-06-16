@@ -17,19 +17,20 @@ import org.koin.core.scope.Scope
 import org.koin.dsl.module
 
 object TrendingModule {
-    val modules get() = listOf(presentation)
+    val modules get() = listOf(presentationModules, additionalModules)
 
-    private val presentation: Module = module {
+    private val presentationModules : Module = module {
+
         viewModel {
-            TrendingViewModel(getUseCase())
-        }
-
-        val navigationModule: Module = module {
-            factory<TrendsNavigation> { TrendingNavigationImpl() }
+            TrendingViewModel(getUseTrendingCase())
         }
     }
 
-    private fun Scope.getUseCase(): GetTrendingUseCase {
+    private val additionalModules:  Module = module {
+        factory<TrendsNavigation> { TrendingNavigationImpl() }
+    }
+
+    private fun Scope.getUseTrendingCase(): GetTrendingUseCase {
         return GetTrendingUseCase(trendingsRepository = getRepository())
     }
 

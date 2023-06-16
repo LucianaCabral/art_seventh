@@ -1,7 +1,6 @@
 package com.lcabral.trends.presentation.viewmodel
 
 import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -19,8 +18,8 @@ internal class TrendingViewModel(
     private val dispatcher: CoroutineDispatcher = Dispatchers.IO,
 ) : ViewModel() {
 
-    private val _viewState = MutableLiveData<ViewTrendingState>()
-    val viewState: MutableLiveData<ViewTrendingState> = _viewState
+    private val _viewState = MutableLiveData<ViewState>()
+    val viewState: MutableLiveData<ViewState> = _viewState
 
     init {
         getTrendings()
@@ -30,7 +29,7 @@ internal class TrendingViewModel(
         viewModelScope.launch {
             trendingUseCase.invoke()
                 .flowOn(dispatcher)
-                .onStart { handleLoading() }
+                .onStart {  }
                 .catch { handleError() }
                 .collect(::handleTrendingsSuccess)
             Log.d("<L>", "getTrendings:${::handleTrendingsSuccess} ")
@@ -38,24 +37,24 @@ internal class TrendingViewModel(
     }
 
     private fun handleTrendingsSuccess(trendingResults: List<Trending>) {
-        ViewTrendingState(
-            isLoadingVisible = false,
+        ViewState(
+            isLoading = false,
             isErrorVisible = false,
             getTrendingsResultItems = trendingResults
         )
     }
 
     private fun handleLoading() {
-        ViewTrendingState(
-            isLoadingVisible = true,
+        ViewState(
+            isLoading = true,
             isErrorVisible = false,
             getTrendingsResultItems = null
         )
     }
 
     private fun handleError() {
-        ViewTrendingState(
-            isLoadingVisible = false,
+        ViewState(
+//            isLoadingVisible = false,
             isErrorVisible = true,
             getTrendingsResultItems = null
         )

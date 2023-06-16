@@ -1,11 +1,9 @@
 package com.lcabral.trends.presentation.extensions
 
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.lcabral.trends.R
 import com.lcabral.trends.presentation.TrendingFragment
-import com.lcabral.trends.presentation.viewmodel.ViewTrendingState
 
 internal fun TrendingFragment.progressDialog(isLoading:Boolean) {
 

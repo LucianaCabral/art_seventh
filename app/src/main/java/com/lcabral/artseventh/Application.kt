@@ -16,7 +16,9 @@ class Application : Application() {
     }
 
     private fun List<Module>.load() {
-        loadKoinModules(modules = this)
-        TrendingModule.modules
+        loadKoinModules(
+            modules = this +
+                    TrendingModule.modules
+        )
     }
 }
