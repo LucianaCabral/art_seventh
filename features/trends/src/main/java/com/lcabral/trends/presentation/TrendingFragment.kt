@@ -18,13 +18,15 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class TrendingFragment : Fragment(R.layout.fragment_trending) {
 
-    private lateinit var binding: FragmentTrendingBinding
+    private lateinit var binding : FragmentTrendingBinding
     private val viewModel: TrendingViewModel by viewModel()
     private val recyclerView: RecyclerView by lazy { binding.recyclerTrending }
     private val trendingAdapter by lazy { TrendingAdapter() }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = FragmentTrendingBinding.inflate(layoutInflater)
+
         setupObservers()
         setupRecycler()
     }
