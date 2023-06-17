@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 internal interface TrendingService {
 
-    @GET("/3/movie/trendings")
+    @GET("/3/trending/movie/week")
     suspend fun getTrendings(): TrendingsResult
 }
