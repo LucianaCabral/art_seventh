@@ -2,6 +2,7 @@ package com.lcabral.trends.di
 
 import com.lcabral.core.common.navigation.TrendsNavigation
 import com.lcabral.core.data.remote.HttpClient
+import com.lcabral.core.data.remote.di.dataModule
 import com.lcabral.trends.data.mapper.TrendingMapper
 import com.lcabral.trends.data.repository.TrendingRepositoryImpl
 import com.lcabral.trends.data.service.TrendingService
@@ -17,7 +18,7 @@ import org.koin.core.scope.Scope
 import org.koin.dsl.module
 
 object TrendingModule {
-    val modules get() = listOf(presentationModules, additionalModules)
+    val modules get() = listOf(presentationModules, additionalModules, dataModule)
 
     private val presentationModules : Module = module {
 
