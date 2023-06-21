@@ -1,6 +1,7 @@
 package com.lcabral.trends.presentation.viewmodel
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -12,6 +13,7 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
+import java.io.IOException
 
 internal class TrendingViewModel(
     private val trendingUseCase: GetTrendingUseCase,
@@ -19,7 +21,7 @@ internal class TrendingViewModel(
 ) : ViewModel() {
 
     private val _viewState = MutableLiveData<ViewState>()
-    val viewState: MutableLiveData<ViewState> = _viewState
+    val viewState: LiveData<ViewState> = _viewState
 
     init {
         getTrendings()
@@ -32,31 +34,21 @@ internal class TrendingViewModel(
                 .onStart {  }
                 .catch { handleError() }
                 .collect(::handleTrendingsSuccess)
-            Log.d("<L>", "getTrendings:${::handleTrendingsSuccess} ")
+
         }
     }
 
     private fun handleTrendingsSuccess(trendingResults: List<Trending>) {
-        ViewState(
-            isLoading = false,
-            isErrorVisible = false,
-            getTrendingsResultItems = trendingResults
-        )
+        if (trendingResults.isNotEmpty()) {
+            ViewState(getTrendingsResultItems = trendingResults)
+            Log.d("<L>", "viewModel:${trendingResults} ")
+
+        }
     }
 
-    private fun handleLoading() {
-        ViewState(
-            isLoading = true,
-            isErrorVisible = false,
-            getTrendingsResultItems = null
-        )
-    }
 
     private fun handleError() {
-        ViewState(
-//            isLoadingVisible = false,
-            isErrorVisible = true,
-            getTrendingsResultItems = null
-        )
+        ViewState(isErrorVisible = true, getTrendingsResultItems = null)
     }
 }
+

@@ -1,5 +1,6 @@
 package com.lcabral.trends.data.repository
 
+import android.util.Log
 import com.lcabral.trends.data.source.TrendingDataSource
 import com.lcabral.trends.domain.model.Trending
 import com.lcabral.trends.domain.repository.TrendingsRepository

@@ -11,10 +11,10 @@ internal class TrendingMapper : Mapper<List<TrendingResponse>, List<Trending>> {
     private fun mapTrendings(source: TrendingResponse) = Trending(
         id = source.id,
         title = source.title,
-        backdropPath = source.backdropPath,
-        overview = source.overview,
+        backdropPath = source.backdropPath.orEmpty(),
+        overview = source.overview.orEmpty(),
         popularity = source.popularity,
-        posterPath = source.posterPath,
+        posterPath = source.posterPath.orEmpty(),
         releaseDate = source.releaseDate,
         voteAverage = source.voteAverage,
     )

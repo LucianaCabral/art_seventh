@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_marginEnd="@dimen/dimen_4">
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/card_item"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -39,6 +39,6 @@
             app:layout_constraintStart_toStartOf="@id/trending_image"
             app:layout_constraintTop_toTopOf="@id/trending_image"
             tools:text="Filme XPTO" />
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

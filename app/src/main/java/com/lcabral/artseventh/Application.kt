@@ -1,6 +1,7 @@
 package com.lcabral.artseventh
 
 import android.app.Application
+import com.lcabral.artseventh.di.MainModule
 import com.lcabral.artseventh.di.MainModule.modules
 import com.lcabral.trends.di.TrendingModule
 import org.koin.core.context.loadKoinModules
@@ -22,3 +23,4 @@ class Application : Application() {
         )
     }
 }
+
