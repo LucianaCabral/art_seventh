@@ -1,5 +1,7 @@
 package com.lcabral.trends.presentation.adapter
 
+import android.net.Uri
+import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.bumptech.glide.Glide
@@ -10,6 +12,7 @@ import com.lcabral.trends.domain.model.Trending
 internal class TrendingViewHolder(private val binding: ItemTrendingCarouselBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
+
     fun bindView(trending: Trending) {
         setupTrending(trending = trending)
     }
@@ -18,11 +21,7 @@ internal class TrendingViewHolder(private val binding: ItemTrendingCarouselBindi
         itemView.apply {
             with(binding) {
                 trendingMovieTv.text = trending.title
-                Glide.with(root.context).load(trending.posterPath).into(trendingImage)
-                trendingImage.load(trending.posterPath) {
-                    placeholder(R.drawable.ic_movie)
-                    fallback(R.drawable.ic_movie)
-                }
+                Glide.with(itemView.context).load("https://image.tmdb.org/t/p/w500${trending.posterPath}").into(trendingImage)
             }
         }
     }

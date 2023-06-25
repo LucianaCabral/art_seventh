@@ -13,26 +13,27 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
-import java.io.IOException
 
 internal class TrendingViewModel(
     private val trendingUseCase: GetTrendingUseCase,
     private val dispatcher: CoroutineDispatcher = Dispatchers.IO,
 ) : ViewModel() {
 
-    private val _viewState = MutableLiveData<ViewState>()
+    private val _viewState : MutableLiveData<ViewState> = MutableLiveData<ViewState>()
     val viewState: LiveData<ViewState> = _viewState
+
 
     init {
         getTrendings()
     }
 
-    private fun getTrendings() {
+
+     private fun getTrendings() {
         viewModelScope.launch {
             trendingUseCase.invoke()
                 .flowOn(dispatcher)
                 .onStart {  }
-                .catch { handleError() }
+                .catch {  }
                 .collect(::handleTrendingsSuccess)
 
         }
@@ -40,15 +41,10 @@ internal class TrendingViewModel(
 
     private fun handleTrendingsSuccess(trendingResults: List<Trending>) {
         if (trendingResults.isNotEmpty()) {
-            ViewState(getTrendingsResultItems = trendingResults)
+            _viewState.value = ViewState(getTrendingsResultItems = trendingResults)
             Log.d("<L>", "viewModel:${trendingResults} ")
 
         }
-    }
-
-
-    private fun handleError() {
-        ViewState(isErrorVisible = true, getTrendingsResultItems = null)
     }
 }
 

@@ -7,7 +7,7 @@ import com.lcabral.artseventh.databinding.ActivityMainBinding
 import com.lcabral.core.common.navigation.TrendsNavigation
 import org.koin.android.ext.android.inject
 
-
+private const val TAG = "Main Activity"
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var binding: ActivityMainBinding

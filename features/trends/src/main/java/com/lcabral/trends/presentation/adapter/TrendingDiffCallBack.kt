@@ -9,6 +9,6 @@ internal class TrendingDiffCallBack : DiffUtil.ItemCallback<Trending>() {
     }
 
     override fun areContentsTheSame(oldItem: Trending, newItem: Trending): Boolean {
-        return oldItem == newItem
+        return oldItem.id == newItem.id && oldItem.title == newItem.title && oldItem.posterPath == newItem.posterPath
     }
 }
