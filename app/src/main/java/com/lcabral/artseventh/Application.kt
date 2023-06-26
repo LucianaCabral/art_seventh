@@ -1,7 +1,9 @@
 package com.lcabral.artseventh
 
 import android.app.Application
+import com.lcabral.artseventh.di.MainModule
 import com.lcabral.artseventh.di.MainModule.modules
+import com.lcabral.trends.di.TrendingModule
 import org.koin.core.context.loadKoinModules
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
@@ -15,6 +17,10 @@ class Application : Application() {
     }
 
     private fun List<Module>.load() {
-        loadKoinModules(modules = this)
+        loadKoinModules(
+            modules = this +
+                    TrendingModule.modules
+        )
     }
 }
+
