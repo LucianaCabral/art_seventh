@@ -7,6 +7,6 @@ import com.lcabral.trends.domain.model.Trending
 
 internal data class ViewState(
     val isLoading: Boolean = false,
-    val isErrorVisible: Boolean = false,
-    val getTrendingsResultItems: List<Trending>
+    val trendingsFailure: Boolean = false,
+    val getTrendingsResultItems: List<Trending>? = null
 )

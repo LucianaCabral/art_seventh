@@ -5,11 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lcabral.trends.R
 import com.lcabral.trends.databinding.FragmentTrendingBinding
 import com.lcabral.trends.presentation.adapter.TrendingAdapter
+import com.lcabral.trends.presentation.extensions.showError
+import com.lcabral.trends.presentation.extensions.showToast
 import com.lcabral.trends.presentation.viewmodel.TrendingViewModel
 import com.lcabral.trends.presentation.viewmodel.ViewState
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -37,33 +38,48 @@ internal class TrendingFragment : Fragment(R.layout.fragment_trending) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
+        setupObservers()
+
     }
 
-
     private fun setupObservers() {
-        viewModel.viewState.observe(this, Observer { state ->
+        handleTrending()
+    }
+
+    private fun handleTrending() {
+        viewModel.viewState.observe(this) { state ->
             state?.let {
-                if (state.getTrendingsResultItems.isNotEmpty()) {
+                if (state.getTrendingsResultItems?.isNotEmpty() == true) {
                     updateList(it)
+                    onSuccessTrendingLoading()
+                } else {
+                   onErrorTrendingLoading()
                 }
             }
-        })
+        }
+    }
+
+    private fun onSuccessTrendingLoading() {
+        binding.progressCircular.visibility = View.GONE
+        showToast("list movie success")
+    }
+
+    private fun onErrorTrendingLoading() {
+        binding.progressCircular.visibility = View.GONE
+        showToast("A lista nao carregou")
+        showError()
     }
 
     private fun updateList(items: ViewState) {
-        trendingAdapter.updateAdapter(items.getTrendingsResultItems)
-    }
-
-    override fun onStart() {
-        super.onStart()
-        setupObservers()
+        items.getTrendingsResultItems?.let { trendingAdapter.updateAdapter(it) }
     }
 
     private fun setupRecyclerView() {
         binding.recyclerTrending.apply {
             setHasFixedSize(true)
             adapter = trendingAdapter
-            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL,false)
+            layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         }
     }
 

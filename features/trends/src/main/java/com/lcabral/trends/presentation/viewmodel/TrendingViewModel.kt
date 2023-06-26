@@ -1,6 +1,5 @@
 package com.lcabral.trends.presentation.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -27,24 +26,36 @@ internal class TrendingViewModel(
         getTrendings()
     }
 
-
      private fun getTrendings() {
         viewModelScope.launch {
             trendingUseCase.invoke()
                 .flowOn(dispatcher)
-                .onStart {  }
-                .catch {  }
+                .onStart { handleLoading() }
+                .catch { handleError() }
                 .collect(::handleTrendingsSuccess)
-
         }
     }
 
+
     private fun handleTrendingsSuccess(trendingResults: List<Trending>) {
         if (trendingResults.isNotEmpty()) {
-            _viewState.value = ViewState(getTrendingsResultItems = trendingResults)
-            Log.d("<L>", "viewModel:${trendingResults} ")
-
+            _viewState.value = ViewState(isLoading = false,
+                getTrendingsResultItems = trendingResults, trendingsFailure = false)
+        } else {
+            handleError()
         }
+    }
+
+    private fun handleError() {
+         _viewState.value = ViewState(isLoading = false,
+            getTrendingsResultItems = null, trendingsFailure = true) }
+
+    private fun handleLoading() {
+        ViewState(isLoading = true, getTrendingsResultItems = null, trendingsFailure = false)
+    }
+
+    private fun retryTrendings() {
+        getTrendings()
     }
 }
 
