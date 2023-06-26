@@ -63,8 +63,7 @@ internal class TrendingFragment : Fragment(R.layout.fragment_trending) {
         binding.recyclerTrending.apply {
             setHasFixedSize(true)
             adapter = trendingAdapter
-            layoutManager = LinearLayoutManager(requireContext())
-            LinearLayoutManager.VERTICAL
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL,false)
         }
     }
 
