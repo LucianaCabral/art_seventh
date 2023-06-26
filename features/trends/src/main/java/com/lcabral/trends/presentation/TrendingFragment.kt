@@ -61,12 +61,10 @@ internal class TrendingFragment : Fragment(R.layout.fragment_trending) {
 
     private fun onSuccessTrendingLoading() {
         binding.progressCircular.visibility = View.GONE
-        showToast("list movie success")
     }
 
     private fun onErrorTrendingLoading() {
         binding.progressCircular.visibility = View.GONE
-        showToast("A lista nao carregou")
         showError()
     }
 
