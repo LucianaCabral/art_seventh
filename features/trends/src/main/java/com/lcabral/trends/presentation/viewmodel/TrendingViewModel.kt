@@ -22,11 +22,7 @@ internal class TrendingViewModel(
     val viewState: LiveData<ViewState> = _viewState
 
 
-    init {
-        getTrendings()
-    }
-
-     private fun getTrendings() {
+     fun getTrendings() {
         viewModelScope.launch {
             trendingUseCase.invoke()
                 .flowOn(dispatcher)
@@ -40,22 +36,19 @@ internal class TrendingViewModel(
     private fun handleTrendingsSuccess(trendingResults: List<Trending>) {
         if (trendingResults.isNotEmpty()) {
             _viewState.value = ViewState(isLoading = false,
-                getTrendingsResultItems = trendingResults, trendingsFailure = false)
+                trendingsFailure = false, getTrendingsResultItems = trendingResults)
         } else {
             handleError()
         }
     }
 
     private fun handleError() {
-         _viewState.value = ViewState(isLoading = false,
-            getTrendingsResultItems = null, trendingsFailure = true) }
+         _viewState.value = ViewState(isLoading = false, trendingsFailure = true,
+             getTrendingsResultItems = null) }
 
     private fun handleLoading() {
-        ViewState(isLoading = true, getTrendingsResultItems = null, trendingsFailure = false)
+        ViewState(isLoading = true, trendingsFailure = false,  getTrendingsResultItems = null)
     }
 
-    private fun retryTrendings() {
-        getTrendings()
-    }
 }
 

@@ -30,6 +30,11 @@ internal class TrendingFragment : Fragment(R.layout.fragment_trending) {
         return binding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.getTrendings()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
