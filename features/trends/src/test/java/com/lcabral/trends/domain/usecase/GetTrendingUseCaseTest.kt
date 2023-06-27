@@ -19,8 +19,8 @@ internal class GetTrendingUseCaseTest {
         val result: List<Trending> = listOf(
             mockk(relaxed = true),
             mockk(relaxed = true),
-            mockk(relaxed = true)
-        )
+            mockk(relaxed = true))
+
         every { getTrendingsRepositoryTest.getTrendings() } returns flow { result }
 
         // When
