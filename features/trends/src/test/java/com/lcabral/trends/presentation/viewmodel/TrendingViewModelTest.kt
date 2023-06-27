@@ -4,7 +4,11 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.lcabral.trends.domain.usecase.GetTrendingUseCase
 import com.lcabral.trends.presentation.stubs.TrendingTestData.getTrendings
-import io.mockk.*
+import io.mockk.clearAllMocks
+import io.mockk.clearMocks
+import io.mockk.every
+import io.mockk.mockk
+import io.mockk.verify
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flow
@@ -27,7 +31,6 @@ internal class TrendingViewModelTest {
     private lateinit var subject: TrendingViewModel
     private val trendingsResult = getTrendings()
 
-
     @Before
     fun setup() {
         subject = TrendingViewModel(trendingUseCase = getTrendingUseCase)
@@ -46,12 +49,9 @@ internal class TrendingViewModelTest {
         // GIVEN
         clearMocks(stateObserver)
         val expectedFirstState = initialState.copy(
-            isLoading = true, trendingsFailure = false,
-            getTrendingsResultItems = null
-        )
-        val expectedSecondState = expectedFirstState.copy(
-            isLoading = false, trendingsFailure = false, getTrendingsResultItems = trendingsResult
-        )
+            isLoading = true, trendingsFailure = false, getTrendingsResultItems = null)
+        val expectedSecondState = expectedFirstState.copy(isLoading = false,
+            trendingsFailure = false, getTrendingsResultItems = trendingsResult)
         every { getTrendingUseCase.invoke() } returns flow { emit(trendingsResult) }
 
         // WHEN
@@ -71,8 +71,10 @@ internal class TrendingViewModelTest {
             isLoading = true, trendingsFailure = false,
             getTrendingsResultItems = null
         )
-        val expectedSecondState = expectedFirstState.copy(isLoading = false,
-            trendingsFailure = true, getTrendingsResultItems = null)
+        val expectedSecondState = expectedFirstState.copy(
+            isLoading = false,
+            trendingsFailure = true, getTrendingsResultItems = null
+        )
         every { getTrendingUseCase.invoke() } returns flow { emit(emptyList()) }
 
         // WHEN
