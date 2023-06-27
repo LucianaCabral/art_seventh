@@ -5,9 +5,11 @@ import androidx.lifecycle.Observer
 import com.lcabral.trends.domain.usecase.GetTrendingUseCase
 import com.lcabral.trends.presentation.stubs.TrendingTestData.getTrendings
 import io.mockk.*
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.test.runTest
+import kotlinx.coroutines.test.setMain
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -15,10 +17,6 @@ import org.junit.Test
 
 @ExperimentalCoroutinesApi
 internal class TrendingViewModelTest {
-
-    @ExperimentalCoroutinesApi
-    @get:Rule
-    val dispatcherRule = MainDispatcherRule()
 
     @get:Rule
     val testRule: InstantTaskExecutorRule = InstantTaskExecutorRule()
@@ -29,12 +27,11 @@ internal class TrendingViewModelTest {
     private lateinit var subject: TrendingViewModel
     private val trendingsResult = getTrendings()
 
+
     @Before
     fun setup() {
-        subject = TrendingViewModel(
-            trendingUseCase = getTrendingUseCase,
-            dispatcher = dispatcherRule.testDispatcher
-        )
+        subject = TrendingViewModel(trendingUseCase = getTrendingUseCase)
+        Dispatchers.setMain(Dispatchers.Unconfined)
         subject.viewState.observeForever(stateObserver)
     }
 
