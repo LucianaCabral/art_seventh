@@ -2,6 +2,8 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
+apply from: "$rootDir/plugins/android-build.gradle"
+
 
 def keyApiPropertiesFile = rootProject.file("$rootDir/keyApi.properties")
 def keyApiProperties = new Properties()
@@ -39,25 +41,13 @@ android {
 }
 
 dependencies {
-
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    testImplementation (TestLibs.jUnitVersion)
+    androidTestImplementation (TestLibs.androidJunit)
+    androidTestImplementation (TestLibs.espressoCore)
 
     // Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
-
-    implementation 'io.insert-koin:koin-core:2.2.3'
-    implementation 'io.insert-koin:koin-android:2.2.3'
-    implementation 'io.insert-koin:koin-androidx-scope:2.2.3'
-    implementation 'io.insert-koin:koin-androidx-viewmodel:2.2.3'
-
-
-
+    implementation (Libs.retrofit)
+    implementation (Libs.retrofitGsonConverter)
+    implementation (Libs.okhttp)
+    implementation (Libs.okHttpLoggingInterceptor)
 }
