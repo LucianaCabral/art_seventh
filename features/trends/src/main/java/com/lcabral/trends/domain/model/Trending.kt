@@ -2,7 +2,6 @@ package com.lcabral.trends.domain.model
 
 internal data class Trending(
     val backdropPath: String,
-    val genreIds: List<Int>,
     val id: Int,
     val overview: String,
     val popularity: Double,

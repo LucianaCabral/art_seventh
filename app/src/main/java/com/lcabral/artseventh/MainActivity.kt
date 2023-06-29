@@ -1,11 +1,27 @@
 package com.lcabral.artseventh
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.commit
+import com.lcabral.artseventh.databinding.ActivityMainBinding
+import com.lcabral.core.common.navigation.TrendsNavigation
+import org.koin.android.ext.android.inject
 
-class MainActivity : AppCompatActivity() {
+private const val TAG = "Main Activity"
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
+
+    private lateinit var binding: ActivityMainBinding
+    private val trendingNavigation: TrendsNavigation by inject()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                replace(R.id.container_main, trendingNavigation.navigateToTrend(), "TAG")
+            }
+        }
     }
 }
+
