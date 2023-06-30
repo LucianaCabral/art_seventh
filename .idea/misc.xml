@@ -8,8 +8,10 @@
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/layout/fragment_trendingV2.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/xml/network_security.xml" value="0.18072916666666666" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/popular/src/main/res/layout/fragment_popular.xml" value="0.2523148148148148" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/popular/src/main/res/layout/item_trending.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/trends/src/main/res/drawable/ic_error.xml" value="0.193" />
-        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/trends/src/main/res/layout/fragment_trending.xml" value="0.16" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/trends/src/main/res/layout/fragment_trending.xml" value="0.1" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/trends/src/main/res/layout/item_trending_carousel.xml" value="0.1" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/trends/src/main/res/layout/rascunho.xml" value="0.1796875" />
       </map>
