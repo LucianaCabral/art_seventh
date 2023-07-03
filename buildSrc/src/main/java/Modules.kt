@@ -6,4 +6,5 @@ object Modules {
     // features
     const val trends = ":features:trends"
     const val popular = ":features:popular"
+    const val upcoming = ":features:upcoming"
 }

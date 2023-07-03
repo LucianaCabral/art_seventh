@@ -47,4 +47,5 @@ dependencies {
     implementation project(Modules.trends)
     implementation project(Modules.navigation)
     implementation project(Modules.popular)
+    implementation project(Modules.upcoming)
 }

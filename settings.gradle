@@ -23,4 +23,5 @@ include ':core:data:hub'
 include ':core:data:remote'
 include ':features:popular'
 include ':features:trends'
+include ':features:upcoming'
 
