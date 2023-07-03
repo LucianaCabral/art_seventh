@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 internal interface PopularService {
 
-    @GET("/3/trending/movie/popular")
+    @GET("/3/movie/popular")
     suspend fun getPopular(): PopularResult
 }

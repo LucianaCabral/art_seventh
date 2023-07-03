@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home_container"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+    <fragment
+        android:name="com.lcabral.trends.presentation.TrendingFragment"
+        android:layout_width="match_parent"
+        android:id="@+id/trending_list"
+        tools:layout="@layout/fragment_trending"
+        android:layout_height="wrap_content"/>
+    <fragment
+        android:name="com.lcabral.features.popular.presentation.PopularFragment"
+        android:layout_width="match_parent"
+        tools:layout="@layout/fragment_popular"
+        android:layout_height="match_parent"
+        android:id="@+id/popular_list" />
+
+</LinearLayout>
