@@ -4,6 +4,6 @@ import com.lcabral.features.upcoming.data.model.UpcomingResult
 import retrofit2.http.GET
 
 internal interface UpcomingService {
-    @GET("/3/trending/movie/upcoming")
+    @GET("/3/movie/upcoming")
     suspend fun getUpcoming(): UpcomingResult
 }
