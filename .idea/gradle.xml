@@ -23,6 +23,7 @@
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/popular" />
             <option value="$PROJECT_DIR$/features/trends" />
+            <option value="$PROJECT_DIR$/features/upcoming" />
           </set>
         </option>
       </GradleProjectSettings>
