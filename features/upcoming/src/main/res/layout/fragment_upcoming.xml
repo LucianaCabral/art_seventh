@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/popular_listing"
-    tools:context=".presentation.PopularFragment">
+    android:id="@+id/upcoming_list"
+    tools:context=".presentation.UpComingFragment">
 
     <TextView
-        android:id="@+id/popular_tv"
+        android:id="@+id/upcoming_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/Upcoming"
         android:layout_marginStart="@dimen/dimen_16"
         android:layout_marginTop="@dimen/dimen_24"
-        android:text="@string/popular"
         android:textSize="@dimen/font_size_18"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,17 +21,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_popular"
-        android:layout_width="wrap_content"
+        android:id="@+id/recycler_upcoming" android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/popular_tv"
-        app:spanCount="3"
-        tools:itemCount="12"
-        tools:listitem="@layout/item_popular" />
+        app:layout_constraintTop_toBottomOf="@id/upcoming_tv"
+        tools:itemCount="6"
+        tools:listitem="@layout/item_upcoming" />
 
     <ProgressBar
         android:id="@+id/progressCircular"
@@ -41,4 +39,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
