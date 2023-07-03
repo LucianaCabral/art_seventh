@@ -10,7 +10,6 @@ import com.lcabral.trends.R
 import com.lcabral.trends.databinding.FragmentTrendingBinding
 import com.lcabral.trends.presentation.adapter.TrendingAdapter
 import com.lcabral.trends.presentation.extensions.showError
-import com.lcabral.trends.presentation.extensions.showToast
 import com.lcabral.trends.presentation.viewmodel.TrendingViewModel
 import com.lcabral.trends.presentation.viewmodel.ViewState
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -82,7 +81,7 @@ internal class TrendingFragment : Fragment(R.layout.fragment_trending) {
             setHasFixedSize(true)
             adapter = trendingAdapter
             layoutManager =
-                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+                LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         }
     }
 
