@@ -10,9 +10,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.lcabral.features.popular.R
 import com.lcabral.features.popular.databinding.FragmentPopularBinding
 import com.lcabral.features.popular.presentation.adapter.PopularAdapter
+import com.lcabral.features.popular.presentation.extensions.showError
 import com.lcabral.features.popular.presentation.viewmodel.PopularViewModel
 import com.lcabral.features.popular.presentation.viewmodel.PopularViewState
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
+private const val NUMBER_ROWS = 3
 
 internal class PopularFragment : Fragment(R.layout.fragment_popular) {
 
@@ -20,7 +23,6 @@ internal class PopularFragment : Fragment(R.layout.fragment_popular) {
     private val binding get() = _binding!!
     private val viewModel: PopularViewModel by viewModel()
     private val popularAdapter by lazy { PopularAdapter() }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,19 +50,32 @@ internal class PopularFragment : Fragment(R.layout.fragment_popular) {
     }
 
     private fun setupObservers() {
-      handlePopular()
+        handlePopular()
     }
 
     private fun handlePopular() {
-       viewModel.viewState.observe(this) { state ->
-           state?.let {
-               if (state.getPopularResultItems?.isNotEmpty() == true)
-                updateList(it)
-           }
-       }
+        viewModel.viewState.observe(this) { state ->
+            state?.let {
+                if (state.getPopularResultItems?.isNotEmpty() == true) {
+                    updateList(it)
+                    onSuccessPopularLoading()
+                } else {
+                    onErrorPopularLoading()
+                }
+            }
+        }
     }
 
-    private fun updateList(state:PopularViewState) {
+    private fun onSuccessPopularLoading() {
+        binding.progressCircular.visibility = View.GONE
+    }
+
+    private fun onErrorPopularLoading() {
+        binding.progressCircular.visibility = View.GONE
+        showError()
+    }
+
+    private fun updateList(state: PopularViewState) {
         state.getPopularResultItems?.let { popularAdapter.updateAdapter(it) }
     }
 
@@ -68,8 +83,7 @@ internal class PopularFragment : Fragment(R.layout.fragment_popular) {
         binding.recyclerPopular.apply {
             setHasFixedSize(true)
             adapter = popularAdapter
-            layoutManager =
-                LinearLayoutManager(context, GridLayoutManager.VERTICAL, false)
+            layoutManager = GridLayoutManager(context, NUMBER_ROWS, LinearLayoutManager.HORIZONTAL, false)
         }
     }
 
