@@ -2,84 +2,15 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
-
-android {
-    compileSdk 33
-
-    defaultConfig {
-        minSdk 21
-        targetSdk 33
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-
-    buildFeatures {
-        viewBinding true
-    }
-}
+apply from: "$rootDir/plugins/android-build.gradle"
 
 dependencies {
-
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2"
-    implementation 'com.google.code.gson:gson:2.9.0'
-    implementation 'androidx.viewpager2:viewpager2:1.0.0'
-    implementation project(path: ':core:data:remote')
-    implementation project(path: ':core:common:navigation')
-    implementation project(path: ':core:common:navigation')
-
-    // Tests
-    testImplementation 'junit:junit:4.13.2'
-    testImplementation project(path: ':core:data:remote')
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0"
-    testImplementation 'app.cash.turbine:turbine:1.0.0'
-    testImplementation("com.squareup.okhttp3:mockwebserver:4.11.0")
-//    testImplementation 'org.koin:koin-test:2.0.1'
-    // test  DI
-    testImplementation 'io.insert-koin:koin-test-junit4:3.1.6'
-
-    // AndroidX Test - JVM testing
-    testImplementation "androidx.test.ext:junit-ktx:1.1.3"
-    testImplementation "androidx.arch.core:core-testing:2.1.0"
-
-    // mockk
-    testImplementation "io.mockk:mockk:1.12.4"
-
-    // Koin
-    implementation 'io.insert-koin:koin-core:2.2.3'
-    implementation 'io.insert-koin:koin-android:2.2.3'
-    implementation 'io.insert-koin:koin-androidx-scope:2.2.3'
-    implementation 'io.insert-koin:koin-androidx-viewmodel:2.2.3'
-
-    //Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-
-    // Glide
-    implementation 'com.github.bumptech.glide:glide:4.15.1'
-
-    // Coil
-    implementation "io.coil-kt:coil:1.3.0"
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20'
-
+    implementation project(Modules.remote)
+    implementation project(Modules.navigation)
+    implementation (Libs.kotlinxSerialization)
+    implementation (Libs.retrofit)
+    implementation (Libs.retrofitGsonConverter)
+    implementation (Libs.glide)
+    implementation (Libs.coil)
+    implementation (Libs.kotlinVersion)
 }

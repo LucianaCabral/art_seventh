@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
+apply from: "$rootDir/plugins/android-build.gradle"
 
 android {
     compileSdk 33
@@ -37,20 +38,13 @@ android {
 }
 
 dependencies {
-
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.fragment:fragment-ktx:1.6.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    testImplementation (TestLibs.androidJunit)
+    testImplementation (TestLibs.jUnitVersion)
+    androidTestImplementation (TestLibs.junitKtx)
+    androidTestImplementation (TestLibs.espressoCore)
 
     // Modules
-    implementation project(path: ':features:trends')
-    implementation project(path: ':core:common:navigation')
-
-    // koin
-    implementation 'io.insert-koin:koin-android:2.2.3'
+    implementation project(Modules.trends)
+    implementation project(Modules.navigation)
+    implementation project(Modules.popular)
 }
