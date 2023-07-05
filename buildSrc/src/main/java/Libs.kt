@@ -5,6 +5,7 @@ object Libs {
     const val material = "com.google.android.material:material:${Versions.material}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragment}"
+    const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefreshLayout}"
 
     // Kotlin
     const val kotlinVersion = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlinVersion}"

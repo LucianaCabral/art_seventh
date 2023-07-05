@@ -32,11 +32,11 @@
             android:id="@+id/trending_movie_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance.AppCompat.Small"
+            style="@style/TextAppearance.AppCompat.Body2"
             android:layout_marginBottom="12dp"
             android:layout_marginStart="8dp"
             android:padding="2dp"
-            android:textColor="@color/grey"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/trending_image"
             app:layout_constraintTop_toTopOf="@id/trending_image"
             tools:text="Filme XPTO" />

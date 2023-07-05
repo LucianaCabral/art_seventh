@@ -45,4 +45,5 @@ dependencies {
     implementation(Libs.koinViewModel)
     implementation(Libs.koinCore)
     implementation(Libs.gson)
+    implementation(Libs.swipeRefreshLayout)
 }

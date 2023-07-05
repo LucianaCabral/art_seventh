@@ -23,7 +23,8 @@ object Versions {
     const val mockk = "1.12.4"
     const val coreTesting = "2.1.0"
     const val okhttp = "4.9.1"
-    const val okHttpLoggingInterceptor =  "4.9.0"
+    const val okHttpLoggingInterceptor = "4.9.0"
     const val androidJunit = "1.1.5"
     const val espressoCore = "3.5.1"
+    const val swipeRefreshLayout = "1.1.0"
 }
