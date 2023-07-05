@@ -5,7 +5,7 @@ import com.lcabral.features.toprated.domain.model.TopRated
 import com.lcabral.features.toprated.domain.repository.TopRatedRepository
 import kotlinx.coroutines.flow.Flow
 
-internal class TopRatedImpl(
+internal class TopRatedRepositotyImpl(
     private val topRatedDataSource: TopRatedDataSource
 ) : TopRatedRepository {
     override fun getTopRated(): Flow<List<TopRated>> {
