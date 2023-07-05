@@ -10,10 +10,11 @@
 
     <TextView
         android:id="@+id/trending_tv"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/dimen_24"
+        android:layout_marginTop="@dimen/dimen_8"
         android:textSize="@dimen/font_size_18"
         android:layout_marginStart="@dimen/dimen_16"
         android:text="@string/title_carousel"

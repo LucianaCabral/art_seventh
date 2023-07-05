@@ -15,7 +15,7 @@ import com.lcabral.features.popular.presentation.viewmodel.PopularViewModel
 import com.lcabral.features.popular.presentation.viewmodel.PopularViewState
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-private const val NUMBER_ROWS = 3
+private const val NUMBER_ROWS = 2
 
 internal class PopularFragment : Fragment(R.layout.fragment_popular) {
 
