@@ -7,4 +7,5 @@ object Modules {
     const val trends = ":features:trends"
     const val popular = ":features:popular"
     const val upcoming = ":features:upcoming"
+    const val topRated = ":features:toprated"
 }
