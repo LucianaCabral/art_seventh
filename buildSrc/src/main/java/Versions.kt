@@ -30,4 +30,5 @@ object Versions {
     const val espressoCore = "3.5.1"
     const val swipeRefreshLayout = "1.1.0"
     const val glideAnnotationProcessor = "1.6.0"
+    const val circleImageView = "3.1.0"
 }
