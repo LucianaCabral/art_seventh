@@ -1,5 +1,6 @@
 package com.lcabral.artseventh
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.statusBarColor
+        window.statusBarColor = Color.BLACK
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {

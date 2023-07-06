@@ -26,17 +26,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars"
-            android:contentDescription="TODO" />
+            android:contentDescription="imagem do filme" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/popular_movie_tv"
-            style="@style/TextAppearance.AppCompat.Small"
+            style="@style/TextAppearance.AppCompat.Body2"
             android:layout_width="wrap_content"
             android:layout_height="67dp"
             android:layout_marginStart="8dp"
             android:layout_marginBottom="12dp"
             android:padding="2dp"
-            android:textColor="@color/grey"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/popular_image"
             app:layout_constraintTop_toTopOf="@id/popular_image"
             tools:text="Filme XPTO" />

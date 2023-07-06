@@ -20,21 +20,23 @@
             android:id="@+id/upcoming_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginBottom="12dp"
             android:contentDescription="@string/Upcoming_image_description"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck"
             tools:src="@tools:sample/avatars" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:id="@+id/upcoming_movie_tv"
-            style="@style/TextAppearance.AppCompat.Small"
+            style="@style/TextAppearance.AppCompat.Body2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:padding="2dp"
-            android:textColor="@color/grey"
+            android:textColor="#FF8A80"
             app:layout_constraintStart_toStartOf="@id/upcoming_image"
             app:layout_constraintTop_toTopOf="@id/upcoming_image"
             tools:text="Filme  upcoming" />

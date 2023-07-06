@@ -5,6 +5,7 @@ object Libs {
     const val material = "com.google.android.material:material:${Versions.material}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragment}"
+    const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefreshLayout}"
 
     // Kotlin
     const val kotlinVersion = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlinVersion}"
@@ -12,7 +13,9 @@ object Libs {
 
     // Glide
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
-
+    const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
+    const val glideTransformation = "jp.wasabeef:glide-transformations:${Versions.glideTransformationVersion}"
+    const val glideAnnotationProcessor = "androidx.annotation:annotation:${Versions.glideAnnotationProcessor}"
     // Retrofit
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofitGsonConverter}"
