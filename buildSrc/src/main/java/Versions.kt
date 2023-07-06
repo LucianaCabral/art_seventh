@@ -6,7 +6,9 @@ object Versions {
     const val constraintLayout = "2.1.4"
     const val fragment = "1.6.0"
     const val material = "1.8.0"
-    const val glide = "4.15.1"
+    const val glide = "4.12.0"
+    const val glideCompiler = "4.12.0"
+    const val glideTransformationVersion = "4.12.0"
     const val retrofit = "2.9.0"
     const val retrofitGsonConverter = "2.9.0"
     const val gson = "2.9.0"
@@ -27,4 +29,5 @@ object Versions {
     const val androidJunit = "1.1.5"
     const val espressoCore = "3.5.1"
     const val swipeRefreshLayout = "1.1.0"
+    const val glideAnnotationProcessor = "1.6.0"
 }

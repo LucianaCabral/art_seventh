@@ -13,7 +13,8 @@ import com.lcabral.core.common.navigation.TrendsNavigation
 import com.lcabral.core.common.navigation.UpcomingNavigation
 import org.koin.android.ext.android.inject
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class
+HomeFragment : Fragment(R.layout.fragment_home) {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!

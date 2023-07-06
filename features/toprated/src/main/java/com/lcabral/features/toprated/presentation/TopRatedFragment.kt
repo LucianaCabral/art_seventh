@@ -46,10 +46,10 @@ internal class TopRatedFragment : Fragment(R.layout.fragment_top_rated) {
     }
 
     private fun setupObservers() {
-        handlePopular()
+        handleTopRated()
     }
 
-    private fun handlePopular() {
+    private fun handleTopRated() {
         viewModel.viewState.observe(this) { state ->
             state?.let {
                 if (state.getTopRatedResultItems?.isNotEmpty() == true) {
@@ -79,7 +79,6 @@ internal class TopRatedFragment : Fragment(R.layout.fragment_top_rated) {
         binding.recyclerTopRated.apply {
             setHasFixedSize(true)
             adapter = topRatedAdapter
-//            layoutManager = GridLayoutManager(context, NUMBER_ROWS, LinearLayoutManager.HORIZONTAL, false)
         }
     }
 
