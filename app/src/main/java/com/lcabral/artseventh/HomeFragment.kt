@@ -8,17 +8,20 @@ import androidx.fragment.app.Fragment
 import com.lcabral.artseventh.databinding.FragmentHomeBinding
 import com.lcabral.artseventh.extensions.includeChild
 import com.lcabral.core.common.navigation.PopularNavigation
+import com.lcabral.core.common.navigation.TopRatedNavigation
 import com.lcabral.core.common.navigation.TrendsNavigation
 import com.lcabral.core.common.navigation.UpcomingNavigation
 import org.koin.android.ext.android.inject
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class
+HomeFragment : Fragment(R.layout.fragment_home) {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private val trendingNavigation: TrendsNavigation by inject()
     private val popularNavigation: PopularNavigation by inject()
     private val upcomingNavigation: UpcomingNavigation by inject()
+    private val topRatedNavigation: TopRatedNavigation by inject()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         if (savedInstanceState == null) {
@@ -26,6 +29,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 includeChild(trendingContainer.id, trendingNavigation.navigateToTrend())
                 includeChild(popularContainer.id, popularNavigation.navigateToPopular())
                 includeChild(upcomingContainer.id, upcomingNavigation.navigateToUpcoming())
+                includeChild(topRatedContainer.id, topRatedNavigation.create())
             }
         }
     }
