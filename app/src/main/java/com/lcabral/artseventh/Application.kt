@@ -2,6 +2,7 @@ package com.lcabral.artseventh
 
 import android.app.Application
 import com.lcabral.artseventh.di.MainModule.modules
+import com.lcabral.features.header.di.HeaderModule
 import com.lcabral.features.popular.di.PopularModule
 import com.lcabral.features.toprated.di.TopRatedModule
 import com.lcabral.features.upcoming.di.UpcomingModule
@@ -24,7 +25,8 @@ class Application : Application() {
                     TrendingModule.modules +
                     PopularModule.modules +
                     UpcomingModule.modules +
-                    TopRatedModule.modules
+                    TopRatedModule.modules +
+                    HeaderModule.modules
         )
     }
 }
