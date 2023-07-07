@@ -1,6 +1,4 @@
 <resources>
     <string name="app_name">Art Seventh</string>
-    <string name="home">Home</string>
-    <string name="search">Search</string>
-    <string name="favorite">Favorites</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>

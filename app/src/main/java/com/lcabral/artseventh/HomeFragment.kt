@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.lcabral.artseventh.databinding.FragmentHomeBinding
 import com.lcabral.artseventh.extensions.includeChild
-import com.lcabral.core.common.navigation.HeaderNavigation
 import com.lcabral.core.common.navigation.PopularNavigation
 import com.lcabral.core.common.navigation.TopRatedNavigation
 import com.lcabral.core.common.navigation.TrendsNavigation
@@ -23,7 +22,6 @@ HomeFragment : Fragment(R.layout.fragment_home) {
     private val popularNavigation: PopularNavigation by inject()
     private val upcomingNavigation: UpcomingNavigation by inject()
     private val topRatedNavigation: TopRatedNavigation by inject()
-    private val headerNavigation: HeaderNavigation by inject()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         if (savedInstanceState == null) {
@@ -32,7 +30,6 @@ HomeFragment : Fragment(R.layout.fragment_home) {
                 includeChild(popularContainer.id, popularNavigation.navigateToPopular())
                 includeChild(upcomingContainer.id, upcomingNavigation.navigateToUpcoming())
                 includeChild(topRatedContainer.id, topRatedNavigation.create())
-                includeChild(homeContainer.id,headerNavigation.create())
             }
         }
     }

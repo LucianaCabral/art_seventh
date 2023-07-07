@@ -50,5 +50,4 @@ dependencies {
     implementation project(Modules.popular)
     implementation project(Modules.upcoming)
     implementation project(Modules.topRated)
-    implementation project(Modules.header)
 }
