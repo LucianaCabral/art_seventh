@@ -9,7 +9,14 @@
     android:orientation="vertical"
     tools:context=".HomeFragment">
 
-    <include layout="@layout/fragment_header"/>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:textColor="#FFFFFFFF"
+        app:title="A R T  *  S E V E N T H"
+        app:titleTextColor="@color/white" />
 
     <View
         android:id="@+id/view_line"

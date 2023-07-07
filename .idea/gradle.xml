@@ -21,7 +21,6 @@
             <option value="$PROJECT_DIR$/core/data/hub" />
             <option value="$PROJECT_DIR$/core/data/remote" />
             <option value="$PROJECT_DIR$/features" />
-            <option value="$PROJECT_DIR$/features/header" />
             <option value="$PROJECT_DIR$/features/popular" />
             <option value="$PROJECT_DIR$/features/toprated" />
             <option value="$PROJECT_DIR$/features/trends" />
