@@ -16,6 +16,8 @@ object Libs {
     const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
     const val glideTransformation = "jp.wasabeef:glide-transformations:${Versions.glideTransformationVersion}"
     const val glideAnnotationProcessor = "androidx.annotation:annotation:${Versions.glideAnnotationProcessor}"
+    const val circleImageView = "de.hdodenhof:circleimageview:${Versions.circleImageView}"
+
     // Retrofit
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofitGsonConverter}"
