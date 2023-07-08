@@ -9,4 +9,5 @@ object Modules {
     const val upcoming = ":features:upcoming"
     const val topRated = ":features:toprated"
     const val header = ":features:header"
+    const val dashboard = ":features:dashboard"
 }

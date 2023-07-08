@@ -1,0 +1,23 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+apply from: "$rootDir/plugins/android-build.gradle"
+
+dependencies {
+    implementation project(Modules.remote)
+    implementation project(Modules.navigation)
+    implementation (Libs.kotlinxSerialization)
+    implementation (Libs.retrofit)
+    implementation (Libs.retrofitGsonConverter)
+    implementation (Libs.glide)
+    implementation (Libs.coil)
+    implementation (Libs.kotlinVersion)
+    implementation(Libs.circleImageView)
+
+    implementation project(Modules.header)
+    implementation project(Modules.trends)
+    implementation project(Modules.popular)
+    implementation project(Modules.upcoming)
+    implementation project(Modules.topRated)
+}

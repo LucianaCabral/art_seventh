@@ -1,23 +1,23 @@
-package com.lcabral.artseventh
+package com.lcabral.features.dashboard.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.lcabral.artseventh.databinding.FragmentHomeBinding
-import com.lcabral.artseventh.extensions.includeChild
 import com.lcabral.core.common.navigation.HeaderNavigation
 import com.lcabral.core.common.navigation.PopularNavigation
 import com.lcabral.core.common.navigation.TopRatedNavigation
 import com.lcabral.core.common.navigation.TrendsNavigation
 import com.lcabral.core.common.navigation.UpcomingNavigation
+import com.lcabral.features.dashboard.R
+import com.lcabral.features.dashboard.databinding.FragmentDashboardBinding
+import com.lcabral.features.dashboard.extensions.includeChild
 import org.koin.android.ext.android.inject
 
-class
-HomeFragment : Fragment(R.layout.fragment_home) {
+internal class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentDashboardBinding? = null
     private val binding get() = _binding!!
     private val trendingNavigation: TrendsNavigation by inject()
     private val popularNavigation: PopularNavigation by inject()
@@ -32,7 +32,7 @@ HomeFragment : Fragment(R.layout.fragment_home) {
                 includeChild(popularContainer.id, popularNavigation.navigateToPopular())
                 includeChild(upcomingContainer.id, upcomingNavigation.navigateToUpcoming())
                 includeChild(topRatedContainer.id, topRatedNavigation.create())
-                includeChild(homeContainer.id,headerNavigation.create())
+                includeChild(homeContainer.id, headerNavigation.create())
             }
         }
     }
@@ -41,7 +41,7 @@ HomeFragment : Fragment(R.layout.fragment_home) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -52,6 +52,6 @@ HomeFragment : Fragment(R.layout.fragment_home) {
 
 
     companion object {
-        fun newInstance(): HomeFragment = HomeFragment()
+        fun newInstance(): DashboardFragment = DashboardFragment()
     }
 }
