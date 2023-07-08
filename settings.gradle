@@ -14,6 +14,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Art Seventh"
 include ':app'
+include ':arch:'
+include ':arch:extensions'
+include ':arch:network'
 include ':core'
 include ':core:common'
 include ':core:common:domain'
