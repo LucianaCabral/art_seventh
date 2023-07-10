@@ -26,6 +26,7 @@
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/dashboard" />
             <option value="$PROJECT_DIR$/features/header" />
+            <option value="$PROJECT_DIR$/features/movies" />
             <option value="$PROJECT_DIR$/features/popular" />
             <option value="$PROJECT_DIR$/features/toprated" />
             <option value="$PROJECT_DIR$/features/trends" />
