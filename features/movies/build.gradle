@@ -1,0 +1,17 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+apply from: "$rootDir/plugins/android-build.gradle"
+
+dependencies {
+    implementation project(Modules.remote)
+    implementation project(Modules.navigation)
+    implementation(Libs.kotlinxSerialization)
+    implementation(Libs.retrofit)
+    implementation(Libs.retrofitGsonConverter)
+    implementation(Libs.glide)
+    implementation(Libs.coil)
+    implementation(Libs.kotlinVersion)
+}
