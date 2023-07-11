@@ -45,11 +45,12 @@ dependencies {
     androidTestImplementation (TestLibs.espressoCore)
 
     // Modules
-    implementation project(Modules.trends)
+    implementation project(Modules.dashboard)
+    implementation project(Modules.movies)
+    implementation project(Modules.header)
     implementation project(Modules.navigation)
     implementation project(Modules.popular)
-    implementation project(Modules.upcoming)
+    implementation project(Modules.trends)
     implementation project(Modules.topRated)
-    implementation project(Modules.header)
-    implementation project(Modules.dashboard)
+    implementation project(Modules.upcoming)
 }

@@ -35,12 +35,22 @@
                 android:layout_height="wrap_content">
 
                 <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/trending_container"
+                    android:id="@+id/movie_container"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    tools:layout="@layout/fragment_movie"
+                    tools:layout_height="96dp" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/trending_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/movie_container"
                     tools:layout="@layout/fragment_trending"
                     tools:layout_height="96dp" />
 

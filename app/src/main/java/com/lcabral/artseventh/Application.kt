@@ -4,6 +4,7 @@ import android.app.Application
 import com.lcabral.artseventh.di.MainModule.modules
 import com.lcabral.features.dashboard.di.DashboardModule
 import com.lcabral.features.header.di.HeaderModule
+import com.lcabral.features.movies.di.MoviesModule
 import com.lcabral.features.popular.di.PopularModule
 import com.lcabral.features.toprated.di.TopRatedModule
 import com.lcabral.features.upcoming.di.UpcomingModule
@@ -28,8 +29,8 @@ class Application : Application() {
                     UpcomingModule.modules +
                     TopRatedModule.modules +
                     HeaderModule.modules +
-                    DashboardModule.modules
-
+                    DashboardModule.modules +
+                    MoviesModule.modules
         )
     }
 }

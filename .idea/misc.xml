@@ -13,14 +13,16 @@
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/layout/sample_bottom_navigation_view.xml" value="0.1625" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.1796875" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/xml/network_security.xml" value="0.18072916666666666" />
-        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/dashboard/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/dashboard/src/main/res/layout/fragment_dashboard.xml" value="0.264" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/header/src/main/res/drawable/ic_chat_24.xml" value="0.194" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/header/src/main/res/drawable/ic_settings.xml" value="0.194" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/header/src/main/res/layout/fragment_header.xml" value="0.4" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/movies/src/main/res/layout/fragment_movie.xml" value="0.18229166666666666" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/movies/src/main/res/layout/item_movie.xml" value="0.2" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/popular/src/main/res/layout/fragment_popular.xml" value="0.1" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/popular/src/main/res/layout/item_popular.xml" value="0.1" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/popular/src/main/res/layout/item_trending.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/toprated/src/main/res/layout/fragment_top_rated.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/toprated/src/main/res/layout/fragment_top_rated.xml" value="0.1" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/toprated/src/main/res/layout/fragment_upcoming.xml" value="0.15228426395939088" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/toprated/src/main/res/layout/item_top_rated.xml" value="0.4" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/toprated/src/main/res/layout/item_upcoming.xml" value="0.149609375" />
@@ -29,7 +31,7 @@
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/trends/src/main/res/layout/item_trending_carousel.xml" value="0.1" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/trends/src/main/res/layout/rascunho.xml" value="0.1796875" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/upcoming/src/main/res/layout/fragment_up_coming.xml" value="0.20052083333333334" />
-        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/upcoming/src/main/res/layout/fragment_upcoming.xml" value="0.2337962962962963" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/upcoming/src/main/res/layout/fragment_upcoming.xml" value="0.1" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/upcoming/src/main/res/layout/item_upcoming.xml" value="0.2" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/upcoming/src/main/res/layout/upcoming_item.xml" value="0.19947916666666668" />
       </map>
