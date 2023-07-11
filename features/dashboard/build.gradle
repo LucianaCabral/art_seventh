@@ -16,8 +16,10 @@ dependencies {
     implementation(Libs.circleImageView)
 
     implementation project(Modules.header)
-    implementation project(Modules.trends)
+    implementation project(Modules.movies)
     implementation project(Modules.popular)
+    implementation project(Modules.trends)
     implementation project(Modules.upcoming)
     implementation project(Modules.topRated)
 }
+

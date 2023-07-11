@@ -11,10 +11,8 @@ internal class  MovieMapper: Mapper<List<MovieResponse>, List<Movie>> {
 
     private fun mapPopular(source: MovieResponse) = Movie(
         id = source.id,
-        title = source.title,
-        backdropPath = source.backdropPath.orEmpty(),
-        overview = source.overview.orEmpty(),
+        name = source.name,
+        description = source.description.orEmpty(),
         posterPath = source.posterPath.orEmpty(),
-        releaseDate = source.releaseDate,
     )
 }

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.lcabral.core.common.navigation.HeaderNavigation
+import com.lcabral.core.common.navigation.MovieNavigation
 import com.lcabral.core.common.navigation.PopularNavigation
 import com.lcabral.core.common.navigation.TopRatedNavigation
 import com.lcabral.core.common.navigation.TrendsNavigation
@@ -24,10 +25,12 @@ internal class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
     private val upcomingNavigation: UpcomingNavigation by inject()
     private val topRatedNavigation: TopRatedNavigation by inject()
     private val headerNavigation: HeaderNavigation by inject()
+    private val movieNavigation: MovieNavigation by inject()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         if (savedInstanceState == null) {
             with(binding) {
+                includeChild(movieContainer.id, movieNavigation.create())
                 includeChild(trendingContainer.id, trendingNavigation.navigateToTrend())
                 includeChild(popularContainer.id, popularNavigation.navigateToPopular())
                 includeChild(upcomingContainer.id, upcomingNavigation.navigateToUpcoming())

@@ -14,6 +14,7 @@
         android:layout_marginStart="@dimen/dimen_16"
         android:layout_marginTop="@dimen/dimen_8"
         android:text="@string/Upcoming"
+        android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="@dimen/font_size_18"
         app:layout_constraintEnd_toEndOf="parent"
