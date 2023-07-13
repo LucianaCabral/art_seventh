@@ -1,4 +1,7 @@
 object Modules {
+    // arch
+    const val archExtensions = ":arch:extensions"
+
     // core
     const val remote = ":core:data:remote"
     const val navigation = ":core:common:navigation"

@@ -1,6 +1,7 @@
 package com.lcabral.features.movies.di
 
 import com.lcabral.core.common.navigation.MovieNavigation
+import com.lcabral.core.common.navigation.SearchNavigation
 import com.lcabral.core.data.remote.HttpClient
 import com.lcabral.core.data.remote.di.dataModule
 import com.lcabral.features.movies.data.mapper.MovieMapper
@@ -12,6 +13,7 @@ import com.lcabral.features.movies.domain.repository.MovieRepository
 import com.lcabral.features.movies.domain.usecase.GetMovieUseCase
 import com.lcabral.features.movies.navigation.MovieNavigationImpl
 import com.lcabral.features.movies.presentation.viewmodel.MovieViewModel
+import com.lcabral.features.search.navigation.SearchNavigationImpl
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.core.scope.Scope
@@ -29,6 +31,7 @@ object MoviesModule {
 
     private val additionalModules: Module = module {
         factory<MovieNavigation> { MovieNavigationImpl() }
+        factory<SearchNavigation> { SearchNavigationImpl() }
     }
 
     private fun Scope.getMovieUsecase():GetMovieUseCase{

@@ -7,6 +7,7 @@ dependencies {
     testImplementation(TestLibs.junitKtx)
     testImplementation(TestLibs.coreTesting)
     testImplementation(TestLibs.mockk)
+    testImplementation(TestLibs.kotlinTest)
 
     //Test android
     androidTestImplementation(TestLibs.androidJunit)
