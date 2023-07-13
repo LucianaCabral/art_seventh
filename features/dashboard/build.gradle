@@ -14,6 +14,8 @@ dependencies {
     implementation (Libs.coil)
     implementation (Libs.kotlinVersion)
     implementation(Libs.circleImageView)
+    implementation(Libs.rxJava2)
+    implementation(Libs.rxJava2Relay)
 
     implementation project(Modules.header)
     implementation project(Modules.movies)

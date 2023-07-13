@@ -19,7 +19,7 @@ object Versions {
     const val coil = "1.3.0"
     const val jUnitVersion = "4.13.2"
     const val coroutinesTest = "1.6.0"
-    const val turbine = "1.0.0"
+    const val turbine = "0.5.2"
     const val junitKtx = "1.1.3"
     const val koinJunit4 = "3.1.6"
     const val mockk = "1.12.4"
@@ -31,4 +31,9 @@ object Versions {
     const val swipeRefreshLayout = "1.1.0"
     const val glideAnnotationProcessor = "1.6.0"
     const val circleImageView = "3.1.0"
+    const val kotlinTest = "1.1.0"
+    const val rxJava2 = "3.1.6"
+    const val rxJavaAndroid = "2.1.1"
+    const val rxJava2Relev = "2.1.1"
+    const val rxJava2Binding = "3.0.0"
 }

@@ -8,4 +8,5 @@ object TestLibs {
     const val mockk = "io.mockk:mockk:${Versions.mockk}"
     const val androidJunit = "androidx.test.ext:junit:${Versions.androidJunit}"
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
+    const val kotlinTest =  "org.jetbrains.kotlin:kotlin-test-junit:${Versions.kotlinTest}"
 }

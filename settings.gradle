@@ -14,7 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Art Seventh"
 include ':app'
-include ':arch:'
+include ':arch'
 include ':arch:extensions'
 include ':arch:network'
 include ':core'
@@ -31,4 +31,3 @@ include ':features:popular'
 include ':features:trends'
 include ':features:toprated'
 include ':features:upcoming'
-

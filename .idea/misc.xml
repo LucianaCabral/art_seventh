@@ -8,16 +8,18 @@
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/layout/bottom_navigation_view.xml" value="0.1796875" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/layout/fragment_bottom_navigation.xml" value="0.18072916666666666" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/layout/fragment_favorite.xml" value="0.146875" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/layout/fragment_trendingV2.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/layout/sample_bottom_navigation_view.xml" value="0.1625" />
-        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.1796875" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.13978494623655913" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/app/src/main/res/xml/network_security.xml" value="0.18072916666666666" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/dashboard/src/main/res/layout/fragment_dashboard.xml" value="0.264" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/header/src/main/res/drawable/ic_chat_24.xml" value="0.194" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/header/src/main/res/drawable/ic_settings.xml" value="0.194" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/header/src/main/res/layout/fragment_header.xml" value="0.4" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/movies/src/main/res/layout/fragment_movie.xml" value="0.18229166666666666" />
+        <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/movies/src/main/res/layout/fragment_search.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/movies/src/main/res/layout/item_movie.xml" value="0.2" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/popular/src/main/res/layout/fragment_popular.xml" value="0.1" />
         <entry key="..\:/Users/englu/AndroidStudioProjects/art_seventh/features/popular/src/main/res/layout/item_popular.xml" value="0.1" />
@@ -37,7 +39,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

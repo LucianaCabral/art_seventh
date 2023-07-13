@@ -37,4 +37,10 @@ object Libs {
 
     // coil
     const val coil = "io.coil-kt:coil:${Versions.coil}"
+
+    //RXJava/RX Android/ RX Binding
+    const val rxJava2 = "io.reactivex.rxjava3:rxjava:${Versions.rxJava2}"
+    const val rxJavaAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxJavaAndroid}"
+    const val rxJava2Relay = "com.jakewharton.rxrelay2:rxrelay:${Versions.rxJava2Relev}"
+    const val rxJava2Binding = "com.jakewharton.rxbinding3:rxbinding-appcompat:${Versions.rxJava2Binding}"
 }

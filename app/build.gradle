@@ -43,6 +43,7 @@ dependencies {
     testImplementation (TestLibs.jUnitVersion)
     androidTestImplementation (TestLibs.junitKtx)
     androidTestImplementation (TestLibs.espressoCore)
+    implementation(Libs.rxJava2)
 
     // Modules
     implementation project(Modules.dashboard)
